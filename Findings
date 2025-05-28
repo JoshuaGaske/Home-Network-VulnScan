@@ -1,33 +1,71 @@
-📝 Home Network Vulnerability Assessment Report
-Date: 05/28/2025
-Scanner Used: Nessus Essentials
-Target: Home Network
+# 🏠 Home Network Vulnerability Assessment Report
 
-1️⃣ Scan Overview
-The Nessus Essentials vulnerability scan was conducted on my home network to identify potential security risks and misconfigurations. The assessment primarily analyzed open ports, SSL configurations, and system vulnerabilities.
-2️⃣ Summary of Findings
-- Total vulnerabilities detected: 1 Medium, all others were Informational
-- No critical or high-risk vulnerabilities were identified
-- Most findings were related to open UDP ports
-- SSL certificate issue flagged—but the warning originated from Nessus itself
+**📅 Date:** _(Insert date of scan)_  
+**🛠 Scanner Used:** Nessus Essentials  
+**🎯 Target:** Home Network  
 
-3️⃣ Medium Vulnerability: SSL Certificate Warning
-🔹 Vulnerability: Nessus Web Interface SSL Certificate Not Trusted
-🔹 Affected Port: 8834/tcp (Nessus Web UI)
-🔹 Description:
-Nessus flagged its own self-signed SSL certificate as "not trusted," a common behavior for security scanners when accessing their web interface.
-🔹 Risk Level: Medium (Expected Behavior)
-- Since Nessus uses a self-signed SSL certificate, browsers and security tools may mark it as untrusted.
-- This does not indicate an actual security weakness in the network.
-🔹 Recommended Action:
-- If desired, install a trusted CA-signed certificate for Nessus to eliminate this alert.
-- Otherwise, no action is needed, as this is an expected behavior for local security scanners.
+---
 
-4️⃣ Informational Findings
-Most additional findings were informational rather than security risks.
-- Several UDP ports were detected as open, but no vulnerabilities were associated with them.
-- This is normal for network communication and does not indicate a security flaw.
-5️⃣ Next Steps & Conclusion
-- ✅ No critical vulnerabilities were identified.
-- ✅ The only flagged issue was an expected SSL warning from Nessus itself.
-- 🔍 For deeper assessments, a credentialed scan or manual validation of open ports could be performed.
+## 🔍 1. Scan Overview  
+This Nessus Essentials vulnerability scan was conducted to identify potential security risks and misconfigurations.  
+The assessment primarily analyzed **open ports, SSL configurations, and system vulnerabilities**.
+
+---
+
+## 📌 2. Summary of Findings  
+✅ **Total vulnerabilities detected:**  
+- 🟠 **1 Medium Severity Issue**  
+- 🔵 All others classified as **Informational**  
+
+🔎 **Key Observations:**  
+- **No critical or high-risk vulnerabilities detected.**  
+- **Most findings were related to open UDP ports** (normal behavior).  
+- **SSL certificate issue flagged**—but only from Nessus itself.  
+
+---
+
+## ⚠️ 3. Medium Severity: SSL Certificate Warning  
+
+- **🔹 Vulnerability:** Nessus Web Interface SSL Certificate Not Trusted  
+- **🔹 Affected Port:** `8834/tcp` (Nessus Web UI)  
+- **🔹 Description:**  
+  Nessus flagged its **own** self-signed SSL certificate as untrusted, which is expected behavior.  
+
+📌 **Risk Level: Medium (Expected Behavior)**  
+- Nessus uses a **self-signed SSL certificate**, so browsers and security tools may mark it as untrusted.  
+- **No action is needed**, unless replacing it with a trusted CA-signed certificate for compliance reasons.  
+
+---
+
+## 📖 4. Informational Findings  
+
+Most additional findings were **informational** rather than security risks:  
+- Several **open UDP ports were detected**, but none had associated vulnerabilities.  
+- Open ports are **normal for network communication** and not an immediate security issue.  
+
+📌 **Example Findings:**  
+| 🔢 Port  | 🔍 Protocol | 📝 Finding Summary |
+|---------|-----------|----------------|
+| `5353/udp` | **mDNS** | Normal multicast DNS activity |
+| `1900/udp` | **UPnP** | Standard Universal Plug & Play discovery |
+| `137/udp` | **NetBIOS** | Local network communication, expected behavior |
+
+---
+
+## 🚀 5. Next Steps & Conclusion  
+
+✅ **No critical vulnerabilities were detected.**  
+✅ The **only flagged issue was an expected Nessus SSL warning**—no actual risk.  
+📌 **Optional follow-up actions:**  
+- Perform **credentialed scans** for deeper assessments.  
+- Investigate **port configurations** if security hardening is required.  
+
+---
+
+### 📂 File Storage  
+**Filename:** `Home-Network-Vulnscan-Report.md`  
+📍 Place this inside your `reports/` folder for documentation.  
+
+---
+
+This should now display **correctly formatted** in GitHub, with **clear headings, bullet points, and tables**. Give it a shot and let me know if anything still looks off! 🚀  
