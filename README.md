@@ -27,8 +27,8 @@ This project documents my experience using **Nessus Essentials**, a free version
 |--------------|-----------------------------|--------------|
 | 🔴 **Critical** | 0 vulnerabilities | (Unpatched OS flaw) |
 | 🟠 **High** | 0 vulnerabilities | (Open ports exposure) |
-| 🟡 **Medium** | 0 vulnerabilities | (Weak encryption protocols) |
-| 🟢 **Low** | 8 vulnerabilities | (Minor misconfigurations) |
+| 🟡 **Medium** | 1 vulnerabilities | (Weak encryption protocols) |
+| 🟢 **Low** | 0 vulnerabilities | (Minor misconfigurations) |
 
 
 ## Remediation Steps  
