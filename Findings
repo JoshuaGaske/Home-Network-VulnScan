@@ -1,0 +1,33 @@
+📝 Home Network Vulnerability Assessment Report
+Date: 05/28/2025
+Scanner Used: Nessus Essentials
+Target: Home Network
+
+1️⃣ Scan Overview
+The Nessus Essentials vulnerability scan was conducted on my home network to identify potential security risks and misconfigurations. The assessment primarily analyzed open ports, SSL configurations, and system vulnerabilities.
+2️⃣ Summary of Findings
+- Total vulnerabilities detected: 1 Medium, all others were Informational
+- No critical or high-risk vulnerabilities were identified
+- Most findings were related to open UDP ports
+- SSL certificate issue flagged—but the warning originated from Nessus itself
+
+3️⃣ Medium Vulnerability: SSL Certificate Warning
+🔹 Vulnerability: Nessus Web Interface SSL Certificate Not Trusted
+🔹 Affected Port: 8834/tcp (Nessus Web UI)
+🔹 Description:
+Nessus flagged its own self-signed SSL certificate as "not trusted," a common behavior for security scanners when accessing their web interface.
+🔹 Risk Level: Medium (Expected Behavior)
+- Since Nessus uses a self-signed SSL certificate, browsers and security tools may mark it as untrusted.
+- This does not indicate an actual security weakness in the network.
+🔹 Recommended Action:
+- If desired, install a trusted CA-signed certificate for Nessus to eliminate this alert.
+- Otherwise, no action is needed, as this is an expected behavior for local security scanners.
+
+4️⃣ Informational Findings
+Most additional findings were informational rather than security risks.
+- Several UDP ports were detected as open, but no vulnerabilities were associated with them.
+- This is normal for network communication and does not indicate a security flaw.
+5️⃣ Next Steps & Conclusion
+- ✅ No critical vulnerabilities were identified.
+- ✅ The only flagged issue was an expected SSL warning from Nessus itself.
+- 🔍 For deeper assessments, a credentialed scan or manual validation of open ports could be performed.
